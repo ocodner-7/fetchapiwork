@@ -14,9 +14,10 @@ function addItemToWall (list) {
 }
 
 function addItemToList() {
+  let addItem = document.getElementById("add")[0].value;
   fetch('https://2ubiyjczwh.execute-api.eu-west-2.amazonaws.com/wall', {
   method: 'POST',
-  body: JSON.stringify({message: item})
+  body: JSON.stringify({message: addItem})
 }).then(function (response) {
   if (response.status == 200) {
     console.log("Ok!")
