@@ -9,7 +9,6 @@ function addItemToWall (list) {
      scndList.appendChild(finalList)
      let currentList = document.getElementById("list")
      document.body.insertBefore(scndList, currentList)
-     console.log(item)
    })
 }
 
