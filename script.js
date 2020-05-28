@@ -1,16 +1,25 @@
-fetch('https://2ubiyjczwh.execute-api.eu-west-2.amazonaws.com/wall', {
+fetch('https://2ubiyjczwh.execute-api.eu-west-2.amazonaws.com/wall').then(response => response.json()).then(data => addItemToWall(data))
+
+
+
+function addItemToWall (list) {
+   list.forEach(function (item){
+     let scndList = document.createElement('li')
+     let finalList = document.createTextNode(item)
+     scndList.appendChild(finalList)
+     let currentList = document.getElementById("list")
+     document.body.insertBefore(scndList, currentList)
+     console.log(item)
+   })
+}
+
+function addItemToList() {
+  fetch('https://2ubiyjczwh.execute-api.eu-west-2.amazonaws.com/wall', {
   method: 'POST',
-  body: JSON.stringify({message: 'Odaine'})
+  body: JSON.stringify({message: item})
 }).then(function (response) {
   if (response.status == 200) {
     console.log("Ok!")
   } else {console.log("Oh no!")}
 })
-
-fetch('https://2ubiyjczwh.execute-api.eu-west-2.amazonaws.com/wall').then(response => response.json()).then(data => console.log(data))
-
-if (localStorage.getItem('test') == "key") {
-  console.log("It's there!")
-} else {
-  localStorage.setItem('test', 'key')
 }
