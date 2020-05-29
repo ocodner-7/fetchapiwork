@@ -1,7 +1,6 @@
 fetch('https://2ubiyjczwh.execute-api.eu-west-2.amazonaws.com/wall').then(response => response.json()).then(data => addItemToWall(data))
 
 
-
 function addItemToWall (list) {
    list.forEach(function (item){
      let scndList = document.createElement("li")
