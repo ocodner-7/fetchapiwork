@@ -1,34 +1,27 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Quote Board</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+
+<head>
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <script src="//code.jquery.com/jquery-3.1.0.slim.min.js"></script>
-<div class="row">
-    <div class="col-md-12">
-      <h1>Quote Board</h1>
-        <div class="main-quote-input-wrap">
-            <div class="main-quote-input fl-wrap">
-              <form id="attach" onsubmit= "addItemToList()">
-                <div class="main-quote-input-item"> <input type="text" class="quote-list-item" placeholder="Enter your quote here!"> </div> <button class="add-items main-search-button" id="quote" type="submit">ADD</button>
-              </form>
-              </div>
-            </div>
-        </div>
-</div>
-<div class="row">
-    <div class="col-md-12">
-        <div class="main-quote-input-wrap">
-            <div class="main-quote-input fl-wrap quote-listing">
-                <ul id="list"></ul>
-            </div>
-        </div>
-    </div>
-</div>
-  </body>
+    
+</head>
+
+<body>
+
+<h1>Quote Board</h1>
+<ul id="list">
+
+</ul>    
+
+<form id="attach" onsubmit= "addItemToList()">
+    <input type="text" id="quote">
+    <button type="submit">Add item</button>
+</form>
+
+
+</body>
+
+<script src="script.js"></script>
+
 </html>
