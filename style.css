@@ -1,0 +1,22 @@
+body {
+    background-color: #8f4df8
+}
+
+#app {
+    text-align: center
+}
+
+
+button {
+     background: #4DB7FE;
+     position: absolute;
+     right: 0px;
+     height: 50px;
+     width: 120px;
+     color: #fff;
+     top: 0;
+     border: none;
+     border-top-right-radius: 0px;
+     border-bottom-right-radius: 0px;
+     cursor: pointer;
+ }
